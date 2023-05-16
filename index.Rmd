@@ -102,7 +102,7 @@ At the moment we have nobody we wish to acknowledge as we are still in the early
 
 Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
 
-The five values we calculated are 
+The five values we calculated are imdb
 
 ### Table
 
