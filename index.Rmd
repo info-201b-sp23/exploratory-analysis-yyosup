@@ -100,15 +100,26 @@ At the moment we have nobody we wish to acknowledge as we are still in the early
 
 ### Summary Information
 
-Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
+One of the values we calculated/found was movies with Highest IMDb Scores by Year. We identified the movies with the highest IMDb scores for each year. The dataset was grouped by release year, and for each year, we filtered the movie(s) with the maximum IMDb score. The results provide the release year, movie title, and corresponding IMDb score for each of these top-rated movies. Our team believed that it was important to see what were the highest rated movies each year and to see how its score compares with other highest IMDb scored movies. We also found which actors played in the movie with the highest scoring IMDb movie/series.We determined the actors who appeared in the movies with the highest IMDb scores. By finding the maximum IMDb score, we filtered the movies with that score. We then extracted the unique names of the actors from these top-rated movies. We found out that actors Bryan Cranston, Aaron Paul, Anna Gunn, Dean Norris, Jonathan Banks, Bob Odenkir, Betsy Brandt and RJ Mitte were actors in the highest IMDb rated movie/series Breaking Bad (2008). We also analyzed the relationship between age certification/restriction and IMDb scores for movies. By grouping movie title and age certification, we calculated the average IMDb score for each combination. The results show the movie titles, their respective age certifications, and the corresponding average IMDb scores. The list is arranged in descending order based on IMDb scores. Another value we found was the year with the highest average IMDb scoring movie/series.This was to see what year movies were best critically rated. We found that the year 1969 had the highest average score with a 8.275. The final value we found was what movie received the most IMDb votes. The movie with the most IMDb votes provides valuable information about audience engagement, popularity, and industry trends. It has implications for decision-making, marketing, and understanding the preferences of moviegoers, making it an important metric to consider in the film industry. We found that the movie Inception had the most amount of IMDb votes.
 
-The five values we calculated are imdb
 
 ### Table
 
-Include a table of aggregate information
+``````{r, echo = FALSE, code = readLines("chart1_example.R")}
+```
+# Calculate aggregate information
+genre_avg_imdb <- credits_title_data %>%
+  group_by(genre) %>%
+  summarize(avg_imdb_score = mean(imdb_score, na.rm = TRUE)) %>%
+  arrange(desc(avg_imdb_score))
 
-Describe why you included the table and what information it reveals
+# Format the column names and round the average IMDb score
+colnames(genre_avg_imdb) <- c("Genre", "Average IMDb Score")
+genre_avg_imdb$`Average IMDb Score` <- round(genre_avg_imdb$`Average IMDb Score`, 2)
+
+# Display the aggregate table
+knitr::kable(genre_avg_imdb, align = "c")
+
 
 ### Chart 1
 
