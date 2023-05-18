@@ -1,4 +1,3 @@
-=======
 ---
 title: "Exploratory Analysis"
 output: html_document
@@ -144,4 +143,3 @@ dist_plot
 Include a chart
 
 Describe why you chose this chart and what information it reveals
->>>>>>> 92414ccf5c7a871544063e79d208e75df2a67e1d
