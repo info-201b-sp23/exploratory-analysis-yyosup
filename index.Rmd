@@ -110,15 +110,16 @@ Include a table of aggregate information
 
 Describe why you included the table and what information it reveals
 
-### Chart 1
+### Top 10 Credited Contributors based on Average IMDb Score
 
-Include a chart
+Credited contributors on IMDb are not given a rating the way that properties are. To create a pseudo-score for each one, we calculated the average IMDb score for all of the movies or shows that they are credited in. To eliminate over-representation of contributors that appear in only one piece of media, only contributors that appear in over 5 piece of media according to IMDb were considered.
 
-Describe why you chose this chart and what information it reveals
+It's interesting to see that 5 out of the 10 top credited contributors (Carol Cleveland, Eric Idle, Terry Gilliam, Terry Jones, and Graham Chapman) were all involved in the British comedy troupe "Monty Python." 
+The range of IMDb scores in the top 10 also fall within a very narrow margin. It's also interesting to see that multiple nationalities are represented in the top 10 including American, British, Japanese, and Korean contributors. 
 
-Here's an example of how to run an R script inside an RMarkdown file:
-
-``````{r, echo = FALSE, code = readLines("chart1_example.R")}
+``````{r, echo = FALSE, message=FALSE}
+source("top_cred_chart.R")
+top_plot
 ```
 
 ### Chart 2
