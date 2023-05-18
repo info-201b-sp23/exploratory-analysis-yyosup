@@ -103,17 +103,33 @@ At the moment we have nobody we wish to acknowledge as we are still in the early
 
 One of the values we calculated/found was movies with the highest IMDb scores by year. We identified the movies with the highest IMDb scores for each year. The dataset was grouped by release year, and for each year, we filtered the movie(s) with the maximum IMDb score. The results provide the release year, movie title, and corresponding IMDb score for each of these top-rated movies. Our team believed that it was important to see which movies had the highest ratings each year and how their scores compared with other highly rated IMDb movies.
 
+
 We also determined the actors who appeared in the movie with the highest IMDb score. By finding the maximum IMDb score, we filtered the movies with that score. We then extracted the unique names of the actors from these top-rated movies. We found out that actors Bryan Cranston, Aaron Paul, Anna Gunn, Dean Norris, Jonathan Banks, Bob Odenkirk, Betsy Brandt, and RJ Mitte were actors in the highest-rated IMDb movie/series, Breaking Bad (2008).
+
 
 Additionally, we analyzed the relationship between age certification/restriction and IMDb scores for movies. By grouping movie title and age certification, we calculated the average IMDb score for each combination. The results show the movie titles, their respective age certifications, and the corresponding average IMDb scores. The list is arranged in descending order based on IMDb scores.
 
+
 Another value we found was the year with the highest average IMDb score for movies/series. This analysis aimed to determine the year when movies were best critically rated. We found that the year 1969 had the highest average score, with a rating of 8.275.
+
 
 Lastly, we identified the movie that received the most IMDb votes. The movie with the most IMDb votes provides valuable information about audience engagement, popularity, and industry trends. It has implications for decision-making, marketing, and understanding the preferences of moviegoers, making it an important metric to consider in the film industry. We found that the movie Inception had the highest number of IMDb votes.
 
 
 ### Table
+Our table shows  the count of unique movies released in each year. It gives an overview of the variety and quantity of movies produced in different years. In addition, the table also has the average IMDb score for each year, which provides an indication of the overall quality or reception of movies in a particular year. It also includes the average number of votes for each year by distinct movies. This helps indicate the level of audience engagement and popularity of movies in different years. Finally the last column the highest rated movie of each year. It highlights the standout film that received the highest IMDb score among the distinct movies released in a specific year.
 
+
+By examining these aggregate metrics, one can gain insights into trends and patterns in the movie industry over time. The table allows for comparisons between different years, showcasing variations in the number of movies, average scores, and audience engagement. It helps to identify exceptional movies and understand how they contribute to the overall landscape of film ratings.
+
+```{r, echo = FALSE, message=FALSE}
+
+library(knitr)
+library(dplyr)
+
+source("table.R")
+knitr::kable(release_year_agg)
+```
 
 
 ### Top 10 Credited Contributors based on Average IMDb Score
@@ -123,7 +139,7 @@ Credited contributors on IMDb are not given a rating the way that properties are
 It's interesting to see that 5 out of the 10 top credited contributors (Carol Cleveland, Eric Idle, Terry Gilliam, Terry Jones, and Graham Chapman) were all involved in the British comedy troupe "Monty Python." 
 The range of IMDb scores in the top 10 also fall within a very narrow margin. It's also interesting to see that multiple nationalities are represented in the top 10 including American, British, Japanese, and Korean contributors. 
 
-``````{r, echo = FALSE, message=FALSE}
+```{r, echo = FALSE, message=FALSE}
 source("top_cred_chart.R")
 top_plot
 ```
@@ -132,7 +148,7 @@ top_plot
 
 This chart shows the distribution of age rating and their relative proportion to each other in the years between 2000-2023. We choose this graph as we wanted to see how trend in the change in age ratings for movies and TV shows in recent years. It shows that in recent years, the proportion of content created for children and teens have decreased, compared to adult and unrated content.
 
-``````{r, echo = FALSE, message=FALSE} 
+```{r, echo = FALSE, message=FALSE} 
 source("rating_distribution.R")
 dist_plot
 ```
@@ -143,3 +159,7 @@ dist_plot
 Include a chart
 
 Describe why you chose this chart and what information it reveals
+```{r}
+
+```
+
