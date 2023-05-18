@@ -12,7 +12,7 @@ output: html_document
  - [Harry Fung](mailto:yfung3@uw.edu)
  - [Yosup Cho](mailto:yosoup@uw.edu)
  - [Hoda Ayad](mailto:hayad03@uw.edu)
- - [Brian Kim](mailto:braink27@uw.edu)
+ - [Brian Kim](mailto:briank27@uw.edu)
 
 ### Date
 
