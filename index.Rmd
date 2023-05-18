@@ -160,6 +160,5 @@ dist_plot
   
 ```{r, echo = FALSE, message=FALSE}
 source("ShowsVSMovies.R")
-bottom_plot
 ```
 
