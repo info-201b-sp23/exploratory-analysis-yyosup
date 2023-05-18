@@ -122,11 +122,15 @@ source("top_cred_chart.R")
 top_plot
 ```
 
-### Chart 2
+### Age certification proportion in movies and TVs during 2000-2023
 
-Include a chart
+This chart shows the distribution of age rating and their relative proportion to each other in the years between 2000-2023. We choose this graph as we wanted to see how trend in the change in age ratings for movies and TV shows in recent years. It shows that in recent years, the proportion of content created for children and teens have decreased, compared to adult and unrated content.
 
-Describe why you chose this chart and what information it reveals
+``````{r, echo = FALSE, message=FALSE} 
+source("rating_distribution.R")
+dist_plot
+```
+
 
 ### Chart 3
 
