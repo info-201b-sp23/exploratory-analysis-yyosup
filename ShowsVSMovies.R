@@ -15,7 +15,7 @@ recent_titles_df <- titles_df %>%
 viz_chart <- recent_titles_df %>%
   filter(type %in% c("MOVIE", "SHOW"))
 
-ggplot(viz_chart) +
+bottom_chart <- ggplot(viz_chart) +
   geom_line(aes(x = release_year, y = num_media, color = type)) +
   scale_color_brewer(palette = "Set2") +
   labs(title = "Trends in Release of Movies and Shows", x = "Release Year", y = "Number of Media Released")
