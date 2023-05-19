@@ -159,6 +159,8 @@ dist_plot
   This chart displays the number of shows and movies being released between the years 2000 and 2022. We chose this graph so that we get a basic understanding of the data trends of movie and show releases in recent years. As the chart shows, the number of shows being released increased from 2000 to about 2021. The number of movies being released showed a similar trend, increasing between the years 2000 and approximatley 2018. Then, in much more recent years (2020-2022), the number of shows and movies being produced decreased drastically. 
   
 ```{r, echo = FALSE, message=FALSE}
+
 source("ShowsVSMovies.R")
+
 ```
 
