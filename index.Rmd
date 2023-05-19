@@ -3,8 +3,6 @@ title: "Exploratory Analysis"
 output: html_document
 ---
 
-## Project title
-
 ## Movie Stars to 5 Stars: Actor Credits as Indicators of IMDb Score
 
 ### Authors
@@ -100,7 +98,6 @@ At the moment we have nobody we wish to acknowledge as we are still in the early
 
 ### Summary Information
 
-
 One of the values we calculated/found was movies with the highest IMDb scores by year. We identified the movies with the highest IMDb scores for each year. The dataset was grouped by release year, and for each year, we filtered the movie(s) with the maximum IMDb score. The results provide the release year, movie title, and corresponding IMDb score for each of these top-rated movies. Our team believed that it was important to see which movies had the highest ratings each year and how their scores compared with other highly rated IMDb movies.
 
 
@@ -115,8 +112,13 @@ Another value we found was the year with the highest average IMDb score for movi
 
 Lastly, we identified the movie that received the most IMDb votes. The movie with the most IMDb votes provides valuable information about audience engagement, popularity, and industry trends. It has implications for decision-making, marketing, and understanding the preferences of moviegoers, making it an important metric to consider in the film industry. We found that the movie Inception had the highest number of IMDb votes.
 
+```{r, echo = FALSE, message=FALSE}
+source("summary.R")
+summary_info
 
-### Table
+```
+
+### Aggregate Table
 Our table shows  the count of unique movies released in each year. It gives an overview of the variety and quantity of movies produced in different years. In addition, the table also has the average IMDb score for each year, which provides an indication of the overall quality or reception of movies in a particular year. It also includes the average number of votes for each year by distinct movies. This helps indicate the level of audience engagement and popularity of movies in different years. Finally the last column the highest rated movie of each year. It highlights the standout film that received the highest IMDb score among the distinct movies released in a specific year.
 
 
@@ -128,7 +130,11 @@ library(knitr)
 library(dplyr)
 
 source("table.R")
+
+colnames(release_year_agg) <- c("Release Year", "Number of Distinct Movies", "Average IMDb Score", "Average IMDb Votes", "Highest Rated Movie")
+
 knitr::kable(release_year_agg)
+
 ```
 
 

@@ -353,9 +353,6 @@ display: none;
 </div>
 
 
-<div id="project-title" class="section level2">
-<h2>Project title</h2>
-</div>
 <div id="movie-stars-to-5-stars-actor-credits-as-indicators-of-imdb-score" class="section level2">
 <h2>Movie Stars to 5 Stars: Actor Credits as Indicators of IMDb
 Score</h2>
@@ -610,9 +607,111 @@ implications for decision-making, marketing, and understanding the
 preferences of moviegoers, making it an important metric to consider in
 the film industry. We found that the movie Inception had the highest
 number of IMDb votes.</p>
+<pre><code>## $num_observations
+## [1] 77801
+## 
+## $highest_IMDb_year
+## # A tibble: 67 × 3
+## # Groups:   release_year [62]
+##    release_year title                           imdb_score
+##           &lt;int&gt; &lt;chr&gt;                                &lt;dbl&gt;
+##  1         1976 Taxi Driver                            8.2
+##  2         1975 Monty Python and the Holy Grail        8.2
+##  3         1967 The Dirty Dozen                        7.7
+##  4         1969 Monty Python&#39;s Flying Circus           8.8
+##  5         1971 Dirty Harry                            7.7
+##  6         1967 Bonnie and Clyde                       7.7
+##  7         1961 The Guns of Navarone                   7.5
+##  8         1966 The Professionals                      7.3
+##  9         1979 Richard Pryor: Live in Concert         8.1
+## 10         1954 White Christmas                        7.5
+## # ℹ 57 more rows
+## 
+## $highest_IMDb_alltime
+##   release_year        title imdb_score
+## 1         2008 Breaking Bad        9.5
+## 
+## $actors_highest_IMDb
+## [1] &quot;Bryan Cranston&quot; &quot;Aaron Paul&quot;     &quot;Anna Gunn&quot;      &quot;Dean Norris&quot;   
+## [5] &quot;Jonathan Banks&quot; &quot;Bob Odenkirk&quot;   &quot;Betsy Brandt&quot;   &quot;RJ Mitte&quot;      
+## 
+## $age_imdb_data
+## # A tibble: 5,479 × 3
+## # Groups:   title [5,441]
+##    title                      age_certification imdb_score
+##    &lt;chr&gt;                      &lt;chr&gt;                  &lt;dbl&gt;
+##  1 Breaking Bad               &quot;TV-MA&quot;                  9.5
+##  2 Avatar: The Last Airbender &quot;TV-Y7&quot;                  9.3
+##  3 Our Planet                 &quot;TV-G&quot;                   9.3
+##  4 Reply 1988                 &quot;TV-14&quot;                  9.2
+##  5 Kota Factory               &quot;TV-MA&quot;                  9.1
+##  6 Major                      &quot;&quot;                       9.1
+##  7 My Mister                  &quot;TV-14&quot;                  9.1
+##  8 The Last Dance             &quot;TV-MA&quot;                  9.1
+##  9 Arcane                     &quot;TV-14&quot;                  9  
+## 10 Attack on Titan            &quot;TV-MA&quot;                  9  
+## # ℹ 5,469 more rows
+## 
+## $year_highest_avg_IMDb
+## [1] 1969
+## 
+## $most_votes_movie
+##       title
+## 1 Inception</code></pre>
+<pre><code>## $num_observations
+## [1] 77801
+## 
+## $highest_IMDb_year
+## # A tibble: 67 × 3
+## # Groups:   release_year [62]
+##    release_year title                           imdb_score
+##           &lt;int&gt; &lt;chr&gt;                                &lt;dbl&gt;
+##  1         1976 Taxi Driver                            8.2
+##  2         1975 Monty Python and the Holy Grail        8.2
+##  3         1967 The Dirty Dozen                        7.7
+##  4         1969 Monty Python&#39;s Flying Circus           8.8
+##  5         1971 Dirty Harry                            7.7
+##  6         1967 Bonnie and Clyde                       7.7
+##  7         1961 The Guns of Navarone                   7.5
+##  8         1966 The Professionals                      7.3
+##  9         1979 Richard Pryor: Live in Concert         8.1
+## 10         1954 White Christmas                        7.5
+## # ℹ 57 more rows
+## 
+## $highest_IMDb_alltime
+##   release_year        title imdb_score
+## 1         2008 Breaking Bad        9.5
+## 
+## $actors_highest_IMDb
+## [1] &quot;Bryan Cranston&quot; &quot;Aaron Paul&quot;     &quot;Anna Gunn&quot;      &quot;Dean Norris&quot;   
+## [5] &quot;Jonathan Banks&quot; &quot;Bob Odenkirk&quot;   &quot;Betsy Brandt&quot;   &quot;RJ Mitte&quot;      
+## 
+## $age_imdb_data
+## # A tibble: 5,479 × 3
+## # Groups:   title [5,441]
+##    title                      age_certification imdb_score
+##    &lt;chr&gt;                      &lt;chr&gt;                  &lt;dbl&gt;
+##  1 Breaking Bad               &quot;TV-MA&quot;                  9.5
+##  2 Avatar: The Last Airbender &quot;TV-Y7&quot;                  9.3
+##  3 Our Planet                 &quot;TV-G&quot;                   9.3
+##  4 Reply 1988                 &quot;TV-14&quot;                  9.2
+##  5 Kota Factory               &quot;TV-MA&quot;                  9.1
+##  6 Major                      &quot;&quot;                       9.1
+##  7 My Mister                  &quot;TV-14&quot;                  9.1
+##  8 The Last Dance             &quot;TV-MA&quot;                  9.1
+##  9 Arcane                     &quot;TV-14&quot;                  9  
+## 10 Attack on Titan            &quot;TV-MA&quot;                  9  
+## # ℹ 5,469 more rows
+## 
+## $year_highest_avg_IMDb
+## [1] 1969
+## 
+## $most_votes_movie
+##       title
+## 1 Inception</code></pre>
 </div>
-<div id="table" class="section level3">
-<h3>Table</h3>
+<div id="aggregate-table" class="section level3">
+<h3>Aggregate Table</h3>
 <p>Our table shows the count of unique movies released in each year. It
 gives an overview of the variety and quantity of movies produced in
 different years. In addition, the table also has the average IMDb score

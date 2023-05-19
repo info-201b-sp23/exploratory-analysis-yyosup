@@ -20,17 +20,15 @@ credits_title_data <- select(credits_title_data, -production_countries)
 credits_title_data <- select(credits_title_data, -tmdb_popularity)
 credits_title_data <- select(credits_title_data, -tmdb_score)
 
+# Perform aggregation on release year
 release_year_agg <- credits_title_data %>%
   distinct(title, .keep_all = TRUE) %>%
   group_by(release_year) %>%
   summarize(
-    Number_of_Distinct_Movies = n(),
-    Average_IMDb_Score = round(mean(imdb_score, na.rm = TRUE), 2),
-    Average_IMDb_Votes = round(mean(imdb_votes, na.rm = TRUE)),
-    Highest_Rated_Movie = first(title[imdb_score == max(imdb_score, na.rm = TRUE)])
+    `Number of Distinct Movies` = n(),
+    `Average IMDb Score` = round(mean(imdb_score, na.rm = TRUE), 2),
+    `Average IMDb Votes` = round(mean(imdb_votes, na.rm = TRUE)),
+    `Highest Rated Movie` = first(title[imdb_score == max(imdb_score, na.rm = TRUE)])
   ) %>%
-  arrange(desc(Average_IMDb_Score))
+  arrange(desc(`Average IMDb Score`))
 
-colnames(release_year_agg) <- c("Release Year", "Number of Distinct Movies", "Average IMDb Score", "Average IMDb Votes", "Highest Rated Movie")
-
-knitr::kable(release_year_agg)
