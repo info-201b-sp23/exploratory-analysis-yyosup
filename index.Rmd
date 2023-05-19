@@ -10,7 +10,7 @@ output: html_document
  - [Harry Fung](mailto:yfung3@uw.edu)
  - [Yosup Cho](mailto:yosoup@uw.edu)
  - [Hoda Ayad](mailto:hayad03@uw.edu)
- - [Brian Kim](mailto:braink27@uw.edu)
+ - [Brian Kim](mailto:briank27@uw.edu)
 
 ### Date
 
@@ -160,12 +160,14 @@ dist_plot
 ```
 
 
-### Chart 3
+### Number of Shows and Films Released from 2000 to 2022
 
-Include a chart
+  This chart displays the number of shows and movies being released between the years 2000 and 2022. We chose this graph so that we get a basic understanding of the data trends of movie and show releases in recent years. As the chart shows, the number of shows being released increased from 2000 to about 2021. The number of movies being released showed a similar trend, increasing between the years 2000 and approximatley 2018. Then, in much more recent years (2020-2022), the number of shows and movies being produced decreased drastically. 
+  
+```{r, echo = FALSE, message=FALSE}
 
-Describe why you chose this chart and what information it reveals
-```{r}
+source("ShowsVSMovies.R")
+bottom_chart
 
 ```
 
