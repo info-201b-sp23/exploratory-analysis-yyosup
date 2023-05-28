@@ -5,8 +5,8 @@ library("tidyverse")
 library("scales")
 
 # Read the csv files
-credits_data <- read.csv("C:/Users/yosup/OneDrive/Desktop/info201/credits.csv", stringsAsFactors = FALSE)
-titles_data <- read.csv("C:/Users/yosup/OneDrive/Desktop/info201/titles.csv", stringsAsFactors = FALSE)
+credits_data <- read.csv("credits.csv", stringsAsFactors = FALSE)
+titles_data <- read.csv("titles.csv", stringsAsFactors = FALSE)
 
 # Join the two tables together 
 credits_title_data <- inner_join(titles_data, credits_data, by = "id")
@@ -75,3 +75,4 @@ summary_info$most_votes_movie <- most_votes_movie
 
 # Print the summary information
 print(summary_info)
+

@@ -35,7 +35,7 @@ top_plot <- ggplot(top_actors) +
   scale_y_discrete(expand = expansion(add = c(0, 0.5))) +
   theme (
     panel.background = element_rect(fill = "white"),
-    panel.grid.major.x = element_line(color = "#A8BAC4", size = 0.3),
+    panel.grid.major.x = element_line(color = "#A8BAC4"),
     axis.ticks.length = unit(0, "mm"),
     axis.title = element_blank(),
     axis.line.y.left = element_line(color = "black"),
@@ -48,3 +48,4 @@ top_plot <- ggplot(top_actors) +
     colour = "white",
     size = 4
   )
+

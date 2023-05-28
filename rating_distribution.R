@@ -38,7 +38,7 @@ dist_plot <- ggplot(age_cert_per_year, aes(x=release_year, y=prop, fill=age_cert
   
   geom_bar(position="stack", stat="identity")+
   scale_y_continuous(labels = scales::percent) +
-  scale_x_continuous(breaks = seq(2000, 2022, 1)) +
+  scale_x_continuous(breaks = seq(2000, 2022, 5)) +
   labs(x = "Year", y = "Proportion",
        title = "Age rating proportion from 2000-2023")
 
